@@ -9,27 +9,27 @@ int m = Convert.ToInt32(Console.ReadLine());
 Console.WriteLine("Input N");
 int n = Convert.ToInt32(Console.ReadLine());
 
-if(m>n) NumberInLineBigToSmall(m,n);
-else NumberInLineSmallToBig(m,n);
+if (m > n) NumberInLineBigToSmall(m, n);
+else NumberInLineSmallToBig(m, n);
 
 void NumberInLineBigToSmall(int number1, int number2)
 {
-    if(number2 == number1) 
+    if (number2 == number1)
     {
         Console.Write(number1);
         return;
     }
     Console.Write($"{number1} ");
-    NumberInLineBigToSmall(number1-1, number2);
+    NumberInLineBigToSmall(number1 - 1, number2);
 }
 
 void NumberInLineSmallToBig(int number1, int number2)
 {
-    if(number1 == number2) 
+    if (number1 == number2)
     {
         Console.Write(number1);
         return;
     }
     Console.Write($"{number1} ");
-    NumberInLineSmallToBig(number1+1, number2);
+    NumberInLineSmallToBig(number1 + 1, number2);
 }
